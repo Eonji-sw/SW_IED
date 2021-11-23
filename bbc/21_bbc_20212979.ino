@@ -1,26 +1,27 @@
+//bbc 폴더 안에 다른 코드 파일들 있습니다.
+
 #include <Servo.h>
 #define PIN_SERVO 10
 #define PIN_IR A0
+Servo myservo;
 #define IR_PIN A0
 #include "medianfilter.h"
 
 MedianFilter<> filter;
 
-Servo myservo;
-
 int a, b; // unit: mm
 
 void setup() {
 // initialize GPIO pins
+
   myservo.attach(PIN_SERVO);
-  myservo.writeMicroseconds(1475);
 // initialize serial port
   Serial.begin(57600);
-
-  filter.init();
-  
   a = 72;
   b = 280;
+  myservo.writeMicroseconds(1475);
+
+  filter.init();
 }
 
 float ir_distance(void){ // return value unit: mm
