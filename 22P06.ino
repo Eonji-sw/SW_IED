@@ -23,7 +23,7 @@
 #define _DUTY_MAX 2400 
 
 // Servo speed control
-#define _SERVO_ANGLE 20
+#define _SERVO_ANGLE 10
 #define _SERVO_SPEED 100
 
 // Event periods
@@ -32,7 +32,7 @@
 #define _INTERVAL_SERIAL 100  
 
 // PID parameters
-#define _KP 0.4
+#define _KP 0.38
 #define a 70
 #define b 417
 //////////////////////
