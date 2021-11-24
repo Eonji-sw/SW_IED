@@ -135,7 +135,7 @@ void loop() {
     // adjust duty_curr toward duty_target by duty_chg_per_interval
     if(duty_target > duty_curr) { 
       duty_curr += duty_chg_per_interval; 
-    if(duty_curr > duty_target) {duty_curr = duty_target;} 
+      if(duty_curr > duty_target) {duty_curr = duty_target;} 
     }
     else {
       duty_curr -= duty_chg_per_interval; 
